@@ -19,5 +19,6 @@ async def on_ready():
 @bot.command()
 async def 팀짜줘(ctx):
     await ctx.send("팀짜기 시작합니다")
-    
+
 bot.run(token)
+
