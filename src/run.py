@@ -83,5 +83,4 @@ class DoguBot(commands.Bot):
 
 bot = DoguBot()
 
-
 bot.run(token)
