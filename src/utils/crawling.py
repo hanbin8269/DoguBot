@@ -18,7 +18,7 @@ class OPGGCrawler:
         return soup
 
     @staticmethod
-    def getProfile(nickname):
+    def get_profile(nickname):
         soup = OPGGCrawler.get_html_from_url("http://www.op.gg/summoner/userName="+ urllib.parse.quote(str(nickname)))
         #bs_obj = BeautifulSoup(html, "html.parser")
         return soup
@@ -40,9 +40,9 @@ class OPGGCrawler:
         return tiers
 
     @staticmethod
-    def getRank(nickname):
+    def get_rank(nickname):
         
-        soup = OPGGCrawler.getProfile(nickname)
+        soup = OPGGCrawler.get_profile(nickname)
         tier_text = ''
         for i in soup.select('div.TierRank'):
             tier_text = i.text
@@ -55,8 +55,8 @@ class OPGGCrawler:
         
         return score
 
-    def getPosition(nickname):
-        soup = OPGGCrawler.getProfile(nickname)
+    def get_position(nickname): # 미완성 기능
+        soup = OPGGCrawler.get_profile(nickname)
         win_text = ''
         for i in soup.select('span.winratio'):
             win_text = i.text

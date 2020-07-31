@@ -2,7 +2,7 @@ import random
 from utils.alias import NAME_NICKNAME, TIER_NUMBER
 from utils.crawling import OPGGCrawler
 
-class OranizeTeam:
+class ExtractTeam:
     @staticmethod
     def get_score_list(tiers) -> list:
         score = []
@@ -11,7 +11,7 @@ class OranizeTeam:
         return score
     
     @staticmethod
-    def common_orgainze(members):
+    def get_team_common(members):
         random.shuffle(members)
         result = {
             "1팀" : members[0:len(members)//2],
@@ -20,13 +20,13 @@ class OranizeTeam:
         return result
 
     @staticmethod
-    def tier_organize_reform(members):
+    def get_team_with_tier(members):
         nicknames = []
         for i in members:
             nicknames.append(NAME_NICKNAME[i][0])
         tiers = OPGGCrawler.get_tier_list(nicknames= nicknames)
         print("tiers : {0}".format(tiers))
-        scores = OranizeTeam.get_score_list(tiers)
+        scores = ExtractTeam.get_score_list(tiers)
         print("scores : {0}".format(scores))
 
         nickname_score = [[i,j] for i,j in zip(nicknames,scores)]

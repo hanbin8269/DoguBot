@@ -1,6 +1,3 @@
-
-
-
 TIER_NUMBER = {
     "Level" : 5,
     "Unranked" : 5,
