@@ -2,7 +2,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 import urllib
 import requests
-from utils.alias import tier_number
+from utils.alias import TIER_NUMBER
 
 class OPGGCrawler:
     def __init__(self):
@@ -49,9 +49,9 @@ class OPGGCrawler:
         
         tier_list = tier_text.split()
         try:
-            score = tier_number[tier_list[0]] + 4 -int(tier_list[1])
+            score = TIER_NUMBER[tier_list[0]] + 4 -int(tier_list[1])
         except IndexError:
-            score  = tier_number[tier_list[0]]
+            score  = TIER_NUMBER[tier_list[0]]
         
         return score
 

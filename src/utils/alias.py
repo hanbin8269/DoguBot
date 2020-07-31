@@ -1,7 +1,7 @@
 
 
 
-tier_number = {
+TIER_NUMBER = {
     "Level" : 5,
     "Unranked" : 5,
     "Iron" : 0,
@@ -18,7 +18,7 @@ tier_number = {
 """
 ["정한빈","류호성","서 진","김승연","김재원","이도건","원준","안채웅","김주성","정현문"]
 """
-name_nickname = {
+NAME_NICKNAME = {
     "이상혁": ["hide on bush"],
     "정한빈": ["볼베주면캐리"],
     "류호성" : ["moo호흡딜링머신"],
@@ -36,7 +36,7 @@ name_nickname = {
     "김상현":['복수하는 사자']
 }
 
-nickname_name = {
+NICKNAME_NAME = {
     "볼베주면캐리": ["정한빈"],
     "moo호흡딜링머신" : ["류호성"],
     "황금의왼발황선홍" : ["서진"],
